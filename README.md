@@ -14,13 +14,13 @@ npx hardhat run scripts/deploy.js
 
 Most of the times setting .env often causes a lot of problems so developers just put them into
 the main hardhat.config.js file. I wanted to have a method that was to always work
-to making sure that API keys as well as private keys were always hidden.
+to making sure that API key as well as the private key were always hidden.
 
 To sucessfully use dotenv.
 
 1. npm init -y
 2. npm i doteenv
-3. in the fule where the API key and private key are required, at the top of the file type in: require("dotenv").config(); - name the file: test.js
+3. in the folder where the API key and private key is required, at the top of the file type in: require("dotenv").config(); - name the file: test.js
 3. type in the same file console.log("process.env.API_KEY") - this will allow you to test if dotenv even works!
 4. create .env file
 5. type in the .env file API_KEY=12345
@@ -50,10 +50,10 @@ module.exports = {
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-in the .env file type in ALCHEMY_API_KEY=<alchemy_api_key> (with no quotation marks since there are no spaces in the API KEY)
+in the .env file type in ALCHEMY_API_KEY=<alchemy_api_key> (with no quotation marks since there are no spaces in the API key)
 also tpye in a line below PRIVATE_KEY=<private key> (with no quotation marks since there are no spaces in the private key)
 
-This will always ensure that your API key and private keys are always when you commit to GitHub. And will save you a lot of 
+This will always ensure that your API key and private keys are always hidden when you commit to GitHub. And will save you a lot of 
 time.
 
 Best!
